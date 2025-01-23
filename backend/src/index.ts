@@ -6,7 +6,7 @@ import { blogRouter } from "./routes/blog";
 
 const app = new Hono();
 
-app.use("/api/*", cors());
+app.use("/*", cors());
 app.get("/", (c) => {
   return c.text("Welcome to medium blog app");
 });
